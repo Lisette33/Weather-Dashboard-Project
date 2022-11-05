@@ -24,26 +24,62 @@
     </div>
   </nav>
 
-    <form class="row g-3">
-      <div class="col-md-4">
-        <label for="inputEmail4">  
-          <h2 class="form-label">Search for a City</h2></label>
-        <input type="email" class="form-control" id="inputEmail4">
-      </div>
-      <div class="d grip gap-2">
-        <button class="btn btn-primary btn-block col-md-3" type="button" id="fetch-button">Search</button>
-      </div>
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="inputEmail4">  
+        <h2 class="form-label">Search for a City</h2></label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+    <div class="d grip gap-2">
+      <button class="btn btn-primary btn-block col-md-3" type="button" id="fetch-button">Search</button>
+    </div>
     </form>
 
   <section>
     <div class="flex-column" id="users"></div>
-     </section>
+  </section>
 
-     <section class="currentCityResults"></section>
+  <section class="currentCityResults">
+    <ul class="list-group list-group-horizontal ">
+      <li class="list-group-item col-md-6">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+    </ul>
+  </section>
 
-     <section class="forecastResults">
-        <h3 class="text-black">5-Day Forecast:</h3>
-     </section>
+  <section class="forecastResults">
+    <h3 class="text-black">5-Day Forecast:</h3>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item col">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+      <li class="list-group-item col">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+      <li class="list-group-item col">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+      <li class="list-group-item col ">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+      <li class="list-group-item col">
+        Temp:<br>
+        Wind:<br>
+        Humindity:<br>
+      </li>
+    </ul>
+  </section>
+   
   </body>
   </main>
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js></script>
@@ -51,17 +87,3 @@
 <script src="./Assets/js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
