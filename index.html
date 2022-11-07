@@ -26,7 +26,7 @@
     <div class="col-md-4">
       <label for="inputEmail4">  
         <h2 class="form-label">Search for a City:</h2></label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="dates-input">
     </div>
     <div class="d grip gap-2">
       <button class="btn btn-primary btn-block col-md-3" type="button" id="fetch-button">Search</button>
@@ -36,43 +36,17 @@
   <section class="currentCityResults">
     <ul class="list-group list-group-horizontal">
       <li class="list-group-item col-md-10">
-        Date:<br>
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
+        <p id="dateInput">Date:</p> 
+        <p id="tempInput">Temp:</p> 
+        <p id="windInput">Wind:</p> 
+        <p id="humidityInput">Humidity:</p> 
       </li>
     </ul>
   </section>
 
   <section class="forecastResults">
     <h3 class="text-black">5-Day Forecast:</h3>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item col-sm-2">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col-sm-2">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col-sm-2">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col-sm-2">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col-sm-2">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-    </ul>
+    <ul class="list-group list-group-horizontal" id="fiveDay"></ul>
   </section>
 
   <section>
