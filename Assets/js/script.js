@@ -18,13 +18,23 @@ function getCurrentWeatherApi(city) {
       // Use the console to examine the response
       console.log(data);
       // My code and data is the response 
-      var userNaameContainer=document.createElement("h3");
-      userNaameContainer.innerText=data.main.temp;
-      userContainer.appendChild(userNaameContainer);
-      var issueUrl=document.createElement("a"); 
-      issueUrl.innerText=data.wind.speed;
-      userContainer.appendChild(issueUrl);
-
+      // var userNaameContainer=document.createElement("h3");
+      // userNaameContainer.innerText=data.main.temp;
+      // userContainer.appendChild(userNaameContainer);
+      // var issueUrl=document.createElement("a"); 
+      // issueUrl.innerText=data.wind.speed;
+      // userContainer.appendChild(issueUrl);
+      // var humidityOne=document.createElement("p"); 
+      // humidityOne.innerText=data.main.humidity;
+      // userContainer.appendChild(humidityOne);
+      var currentDate=document.querySelector('#dateInput')
+      currentDate.textContent=new Date(data.dt*1000).toLocaleDateString();
+      var tempDateOne=document.querySelector('#tempInput')
+      tempDateOne.textContent="Temp: "+data.main.temp+"*";
+      var windDateOne=document.querySelector('#windInput')
+      windDateOne.textContent="Wind: "+data.wind.speed+"*";
+      var humidityDateOne=document.querySelector('#humidityInput')
+      humidityDateOne.textContent="Humidity: "+data.main.humidity+"*";
     });
 }
 
@@ -43,13 +53,22 @@ function getForecastApi(lat, lon) {
         console.log(data);
        // Loop through the data and generate your HTML
           //   My code and data is the response 
-        for (var i=0; i< data.list.length;i++) {
+        for (var i=0; i< data.list.length;i+=8) {
+          var li=document.createElement("li");
+          li.classList.add("list-group-item","col-sm-2");
+          // var forecastDate=document.querySelector('#fiveDay')
+          // forecastDate.textContent=new Date(data.dt*1000).toLocaleDateString();
           var userNaameContainer=document.createElement("h3");
-          userNaameContainer.innerText=data[i].login;
-          userContainer.appendChild(userNaameContainer);
+          userNaameContainer.innerText="Temp: "+data.list[i].main.temp+"*";
+          li.appendChild(userNaameContainer);
           var issueUrl=document.createElement("a");
-          issueUrl.innerText=data[i].html_url;
-          userContainer.appendChild(issueUrl);
+          issueUrl.innerText="Wind: "+data.list[i].wind.speed+"*";
+          li.appendChild(issueUrl);
+          var humidity=document.createElement("p");
+          humidity.innerText="Humidity: "+data.list[i].main.humidity+"*";
+          li.appendChild(humidity);
+          var ul=document.querySelector('#fiveDay');
+          ul.appendChild(li);
         }
       });
   }
@@ -66,8 +85,6 @@ function getApi() {
       })
       .then(function (data) {
        // Use the console to examine the response
-        console.log(data);
-        console.log(data[0].lat,data[0].lon);
     //  Loop through the data and generate your HTML
             // My code and data is the response 
     getForecastApi(data[0].lat,data[0].lon);

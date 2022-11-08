@@ -15,69 +15,42 @@
     ></script>
   </head>
   <body> 
-  <main>
-    <!-- As a navbar -->
-  <nav class="navbar" style="background-color: rgb(63, 63, 159);">
-    <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1 p-5 text-center text-white"><h1>Weather Dashboard</h1></span>
-      <main class="flex-row justify-left align-left col-auto p-4">
-    </div>
-  </nav>
 
-  <form class="row g-3">
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: rgb(63, 63, 159)">
+    <h1>Weather Dashboard</h1>
+    </nav>
+
+  <main></main>
+    <form class="row g-3">
     <div class="col-md-4">
       <label for="inputEmail4">  
-        <h2 class="form-label">Search for a City</h2></label>
-      <input type="email" class="form-control" id="inputEmail4">
+        <h2 class="form-label">Search for a City:</h2></label>
+      <input type="email" class="form-control" id="dates-input">
     </div>
     <div class="d grip gap-2">
       <button class="btn btn-primary btn-block col-md-3" type="button" id="fetch-button">Search</button>
     </div>
     </form>
 
-  <section>
-    <div class="flex-column" id="users"></div>
-  </section>
-
   <section class="currentCityResults">
-    <ul class="list-group list-group-horizontal ">
-      <li class="list-group-item col-md-6">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item col-md-10">
+        <p id="dateInput">Date:</p> 
+        <p id="tempInput">Temp:</p> 
+        <p id="windInput">Wind:</p> 
+        <p id="humidityInput">Humidity:</p> 
       </li>
     </ul>
   </section>
 
   <section class="forecastResults">
     <h3 class="text-black">5-Day Forecast:</h3>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item col">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col ">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-      <li class="list-group-item col">
-        Temp:<br>
-        Wind:<br>
-        Humindity:<br>
-      </li>
-    </ul>
+    <ul class="list-group list-group-horizontal" id="fiveDay"></ul>
+  </section>
+
+  <section>
+    <div class="flex-column" id="users"></div>
   </section>
    
   </body>
