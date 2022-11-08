@@ -1,7 +1,6 @@
 var userContainer = document.getElementById('users');
 var fetchButton = document.getElementById('fetch-button');
 var APIKey = "bf7b44b0999819873a0d8c5e9db1d207";
-// var city = Miami; 
 var lat;
 var lon;
 
@@ -17,16 +16,6 @@ function getCurrentWeatherApi(city) {
     .then(function (data) {
       // Use the console to examine the response
       console.log(data);
-      // My code and data is the response 
-      // var userNaameContainer=document.createElement("h3");
-      // userNaameContainer.innerText=data.main.temp;
-      // userContainer.appendChild(userNaameContainer);
-      // var issueUrl=document.createElement("a"); 
-      // issueUrl.innerText=data.wind.speed;
-      // userContainer.appendChild(issueUrl);
-      // var humidityOne=document.createElement("p"); 
-      // humidityOne.innerText=data.main.humidity;
-      // userContainer.appendChild(humidityOne);
       var currentDate=document.querySelector('#dateInput')
       currentDate.textContent=new Date(data.dt*1000).toLocaleDateString();
       var tempDateOne=document.querySelector('#tempInput')
@@ -37,7 +26,6 @@ function getCurrentWeatherApi(city) {
       humidityDateOne.textContent="Humidity: "+data.main.humidity+"*";
     });
 }
-
 
 // Forecast for city
 function getForecastApi(lat, lon) {                                     
@@ -51,13 +39,10 @@ function getForecastApi(lat, lon) {
       .then(function (data) {
        // Use the console to examine the response
         console.log(data);
-       // Loop through the data and generate your HTML
-          //   My code and data is the response 
+       // Loop through data and generate your HTML
         for (var i=0; i< data.list.length;i+=8) {
           var li=document.createElement("li");
           li.classList.add("list-group-item","col-sm-2");
-          // var forecastDate=document.querySelector('#fiveDay')
-          // forecastDate.textContent=new Date(data.dt*1000).toLocaleDateString();
           var userNaameContainer=document.createElement("h3");
           userNaameContainer.innerText="Temp: "+data.list[i].main.temp+"*";
           li.appendChild(userNaameContainer);
@@ -84,9 +69,8 @@ function getApi() {
         return response.json();
       })
       .then(function (data) {
-       // Use the console to examine the response
-    //  Loop through the data and generate your HTML
-            // My code and data is the response 
+      
+    // My code and data is the response 
     getForecastApi(data[0].lat,data[0].lon);
     getCurrentWeatherApi(data[0].name);
       });
