@@ -18,23 +18,23 @@ function getCurrentWeatherApi(city) {
       // Use the console to examine the response
       console.log(data);
       // My code and data is the response 
-      var userNaameContainer=document.createElement("h3");
-      userNaameContainer.innerText=data.main.temp;
-      userContainer.appendChild(userNaameContainer);
-      var issueUrl=document.createElement("a"); 
-      issueUrl.innerText=data.wind.speed;
-      userContainer.appendChild(issueUrl);
-      var humidityOne=document.createElement("p"); 
-      humidityOne.innerText=data.main.humidity;
-      userContainer.appendChild(humidityOne);
+      // var userNaameContainer=document.createElement("h3");
+      // userNaameContainer.innerText=data.main.temp;
+      // userContainer.appendChild(userNaameContainer);
+      // var issueUrl=document.createElement("a"); 
+      // issueUrl.innerText=data.wind.speed;
+      // userContainer.appendChild(issueUrl);
+      // var humidityOne=document.createElement("p"); 
+      // humidityOne.innerText=data.main.humidity;
+      // userContainer.appendChild(humidityOne);
       var currentDate=document.querySelector('#dateInput')
       currentDate.textContent=new Date(data.dt*1000).toLocaleDateString();
       var tempDateOne=document.querySelector('#tempInput')
       tempDateOne.textContent="Temp: "+data.main.temp+"*";
       var windDateOne=document.querySelector('#windInput')
-      windDateOne.textContent="Wind: "+data.main.temp+"*";
+      windDateOne.textContent="Wind: "+data.wind.speed+"*";
       var humidityDateOne=document.querySelector('#humidityInput')
-      humidityDateOne.textContent="Humidity: "+data.main.temp+"*";
+      humidityDateOne.textContent="Humidity: "+data.main.humidity+"*";
     });
 }
 
