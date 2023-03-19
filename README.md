@@ -1,5 +1,3 @@
-<img width="468" alt="Weather-Dashboard-pic" src="https://user-images.githubusercontent.com/113862182/200449546-494764a6-dd38-4083-92d7-463a0cbd5aea.png">
-
 # Weather-Dashboard-Project
 The weather dashboard is an application for users to view the weather forecast.
 
@@ -15,8 +13,7 @@ https://lisette33.github.io/Weather-Dashboard-Project/
 ## Description
 The project is an application that allows users to search a city for current weather and five-day forecast. This is weather app tool for users.
 
-## Acknowledgment
-I would like to thank those who provided their helpful guidance.
+<img width="468" alt="Weather-Dashboard-pic" src="https://user-images.githubusercontent.com/113862182/200449546-494764a6-dd38-4083-92d7-463a0cbd5aea.png">
 
 ## Project Guidelines stated as:
 
@@ -35,6 +32,9 @@ WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
 WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
+
+## Acknowledgment
+I would like to thank those who provided their helpful guidance.
 
 ## Licence
 MIT
