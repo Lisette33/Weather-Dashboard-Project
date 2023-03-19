@@ -10,7 +10,7 @@ Weather Dashboard Application for Users
 Lisette Morales
 
 ## Deployment URL
-https://github.com/Lisette33/Weather-Dashboard-Project
+https://lisette33.github.io/Weather-Dashboard-Project/
 
 ## Description
 The project is an application that allows users to search a city for current weather and five-day forecast. This is weather app tool for users.
